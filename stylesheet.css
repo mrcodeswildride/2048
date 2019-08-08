@@ -1,0 +1,106 @@
+body {
+    background-color: beige;
+}
+
+#board,
+#sidePanel {
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 30px;
+}
+
+#board {
+    border: 2px solid black;
+    font-size: 0;
+    margin-right: 30px;
+}
+
+.square {
+    display: inline-block;
+    width: 76px;
+    height: 76px;
+    background-color: white;
+    border: 2px solid black;
+}
+
+.number {
+    position: absolute;
+    width: 76px;
+    height: 76px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 76px;
+    user-select: none;
+    transition: transform 500ms;
+}
+
+.n2 {
+    background-color: #eee4da;
+}
+
+.n4 {
+    background-color: #ede0c8;
+}
+
+.n8 {
+    background-color: #f2b179;
+    color: #f9f6f2;
+}
+
+.n16 {
+    background-color: #f59563;
+    color: #f9f6f2;
+}
+
+.n32 {
+    background-color: #f67c5f;
+    color: #f9f6f2;
+}
+
+.n64 {
+    background-color: #f65e3b;
+    color: #f9f6f2;
+}
+
+.n128 {
+    background-color: #edcf72;
+    color: #f9f6f2;
+    font-size: 36px;
+}
+
+.n256 {
+    background-color: #edcc61;
+    color: #f9f6f2;
+    font-size: 36px;
+}
+
+.n512 {
+    background-color: #edc850;
+    color: #f9f6f2;
+    font-size: 36px;
+}
+
+.n1024 {
+    background-color: #22b14c;
+    color: #f9f6f2;
+    font-size: 28px;
+}
+
+.n2048 {
+    background-color: #00a2e8;
+    color: #f9f6f2;
+    font-size: 28px;
+}
+
+#instructions {
+    width: 325px;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+#message {
+    color: #ff4c00;
+    font-size: 50px;
+    margin: 0px;
+}
