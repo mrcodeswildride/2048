@@ -4,22 +4,29 @@ let messageParagraph = document.getElementById(`messageParagraph`)
 // two-dimensional array to store the numbers on the board
 let board = createBlankGrid()
 
+// whether or not numbers should move when arrow key pressed
+let movable = true
+
 placeRandomNumber()
 placeRandomNumber(true)
-document.addEventListener(`keydown`, keyPress)
+document.addEventListener(`keydown`, keyPressed)
 
-function keyPress(event) {
-  if (event.keyCode == 37) { // left arrow
-    move(-1, 0, true)
-  }
-  else if (event.keyCode == 38) { // up arrow
-    move(0, -1, true)
-  }
-  else if (event.keyCode == 39) { // right arrow
-    move(1, 0, true)
-  }
-  else if (event.keyCode == 40) { // down arrow
-    move(0, 1, true)
+function keyPressed(event) {
+  event.preventDefault()
+
+  if (movable) {
+    if (event.keyCode == 37) { // left arrow
+      move(-1, 0, true)
+    }
+    else if (event.keyCode == 38) { // up arrow
+      move(0, -1, true)
+    }
+    else if (event.keyCode == 39) { // right arrow
+      move(1, 0, true)
+    }
+    else if (event.keyCode == 40) { // down arrow
+      move(0, 1, true)
+    }
   }
 }
 
@@ -30,7 +37,7 @@ function keyPress(event) {
 // test: true if not actually moving but seeing if can move, false if actually moving
 function move(xDirection, yDirection, firstTime, test) {
     if (firstTime && !test) {
-      document.removeEventListener(`keydown`, keyPress)
+      movable = false
     }
 
     // two-dimensional array that represents how many spaces each number will move
@@ -59,7 +66,7 @@ function move(xDirection, yDirection, firstTime, test) {
         }
         else {
           if (!test) {
-            document.addEventListener(`keydown`, keyPress)
+            movable = true
           }
 
           return false // indicates that no numbers moved
@@ -270,7 +277,7 @@ function placeRandomNumberAndCheckGameOver() {
       messageParagraph.innerHTML = `You lose`
     }
     else {
-      document.addEventListener(`keydown`, keyPress)
+      movable = true
     }
   }
 }
