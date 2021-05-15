@@ -32,8 +32,8 @@ body {
   font-size: 40px;
   text-align: center;
   line-height: 76px;
-  user-select: none;
   transition: transform 500ms;
+  user-select: none;
 }
 
 .n2 {

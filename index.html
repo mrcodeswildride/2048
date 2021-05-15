@@ -1,52 +1,49 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>2048</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
 
-<head>
-	<title>2048</title>
-	<meta name="viewport" content="width=device-width, initial-scale=0.5">
-	<link href="style.css" rel="stylesheet">
-	<script src="script.js" defer>
+  <body>
+    <h1>2048</h1>
 
-	</script>
-</head>
+    <div id="grid">
+      <div class="row">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
+      <div class="row">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
+      <div class="row">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
+      <div class="row">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+      </div>
+    </div>
 
-<body>
-	<h1>2048</h1>
+    <div id="sidePanel">
+      <p id="instructions">
+        Use the arrow keys to slide the numbers. The goal is to combine matching numbers to get a
+        2048 tile.
+      </p>
 
-	<div id="grid">
-		<div class="row">
-			<div class="square"></div>
-			<div class="square"></div>
-			<div class="square"></div>
-			<div class="square"></div>
-		</div>
-		<div class="row">
-			<div class="square"></div>
-			<div class="square"></div>
-			<div class="square"></div>
-			<div class="square"></div>
-		</div>
-		<div class="row">
-			<div class="square"></div>
-			<div class="square"></div>
-			<div class="square"></div>
-			<div class="square"></div>
-		</div>
-		<div class="row">
-			<div class="square"></div>
-			<div class="square"></div>
-			<div class="square"></div>
-			<div class="square"></div>
-		</div>
-	</div>
-
-	<div id="sidePanel">
-		<p id="instructions">
-			Use the arrow keys to slide the numbers. The goal is to combine matching numbers to get a 2048 tile.
-		</p>
-
-		<p id="messageParagraph"></p>
-	</div>
-</body>
-
+      <p id="messageParagraph"></p>
+    </div>
+  </body>
 </html>
